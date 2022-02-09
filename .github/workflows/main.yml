@@ -11,10 +11,6 @@ jobs:
   deploy-to-github-pages:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup .NET 6
-        uses: actions/setup-dotnet@1
-        with:
-          dotnet-version: 6.0
       - name: Publish .NET 6 Project
         run: dotnet publish -c Release -o release --nologo
       - name: Change base.tag in index.html from / to ArashIzadiWebsiteGHP
