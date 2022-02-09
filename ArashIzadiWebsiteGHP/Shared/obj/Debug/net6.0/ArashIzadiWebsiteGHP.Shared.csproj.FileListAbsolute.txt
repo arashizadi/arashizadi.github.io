@@ -1,0 +1,12 @@
+C:\Users\arash\repos\arashizadi.github.io\ArashIzadiWebsiteGHP\Shared\bin\Debug\net6.0\ArashIzadiWebsiteGHP.Shared.deps.json
+C:\Users\arash\repos\arashizadi.github.io\ArashIzadiWebsiteGHP\Shared\bin\Debug\net6.0\ArashIzadiWebsiteGHP.Shared.dll
+C:\Users\arash\repos\arashizadi.github.io\ArashIzadiWebsiteGHP\Shared\bin\Debug\net6.0\ArashIzadiWebsiteGHP.Shared.pdb
+C:\Users\arash\repos\arashizadi.github.io\ArashIzadiWebsiteGHP\Shared\obj\Debug\net6.0\ArashIzadiWebsiteGHP.Shared.csproj.AssemblyReference.cache
+C:\Users\arash\repos\arashizadi.github.io\ArashIzadiWebsiteGHP\Shared\obj\Debug\net6.0\ArashIzadiWebsiteGHP.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arash\repos\arashizadi.github.io\ArashIzadiWebsiteGHP\Shared\obj\Debug\net6.0\ArashIzadiWebsiteGHP.Shared.AssemblyInfoInputs.cache
+C:\Users\arash\repos\arashizadi.github.io\ArashIzadiWebsiteGHP\Shared\obj\Debug\net6.0\ArashIzadiWebsiteGHP.Shared.AssemblyInfo.cs
+C:\Users\arash\repos\arashizadi.github.io\ArashIzadiWebsiteGHP\Shared\obj\Debug\net6.0\ArashIzadiWebsiteGHP.Shared.csproj.CoreCompileInputs.cache
+C:\Users\arash\repos\arashizadi.github.io\ArashIzadiWebsiteGHP\Shared\obj\Debug\net6.0\ArashIzadiWebsiteGHP.Shared.dll
+C:\Users\arash\repos\arashizadi.github.io\ArashIzadiWebsiteGHP\Shared\obj\Debug\net6.0\refint\ArashIzadiWebsiteGHP.Shared.dll
+C:\Users\arash\repos\arashizadi.github.io\ArashIzadiWebsiteGHP\Shared\obj\Debug\net6.0\ArashIzadiWebsiteGHP.Shared.pdb
+C:\Users\arash\repos\arashizadi.github.io\ArashIzadiWebsiteGHP\Shared\obj\Debug\net6.0\ref\ArashIzadiWebsiteGHP.Shared.dll
