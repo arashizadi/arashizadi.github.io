@@ -9,11 +9,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Commit wwwroot to Github Pages
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: main
-          FOLDER: build/wwwroot
-          SINGLE_COMMIT: true
-
