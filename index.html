@@ -34,10 +34,9 @@
     }
 
     .mode-toggle {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      z-index: 1000;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 0.5rem 0.75rem;
       border-radius: 0.375rem;
       background-color: rgba(250, 250, 250, 0.85);
@@ -97,7 +96,7 @@
 <body>
   <!-- Personal Info Section -->
   <div class="container my-5">
-    <div class="row align-items-center position-relative">
+    <div class="row align-items-center">
       <div class="col-md-6">
         <h1 class="mb-1">Arash Izadi</h1>
         <p class="mb-0">Senior Software Engineer at RVO Health</p>
@@ -108,13 +107,15 @@
       </div>
 
       <div class="col-md-6 text-md-end">
-        <!-- Theme toggle (accessible name + pressed state) -->
-        <button type="button" class="btn btn-sm btn-outline-secondary mode-toggle" onclick="toggleMode()"
-          aria-label="Toggle dark mode" aria-pressed="false">
-          <i class="bi bi-moon-fill" aria-hidden="true"></i>
-        </button>
+        <!-- Top-right action row: button sits ABOVE the contact list, aligned right -->
+        <div class="d-flex justify-content-md-end justify-content-start mb-2">
+          <button type="button" class="btn btn-sm btn-outline-secondary mode-toggle" onclick="toggleMode()"
+            aria-label="Toggle dark mode" aria-pressed="false">
+            <i class="bi bi-moon-fill" aria-hidden="true"></i>
+          </button>
+        </div>
 
-        <ul class="list-unstyled mb-0 mt-4 mt-md-0">
+        <ul class="list-unstyled mb-0">
           <li>
             <i class="bi bi-envelope-fill me-2" aria-hidden="true"></i>
             <a href="mailto:thisisarash@proton.me">thisisarash@proton.me</a>
@@ -281,7 +282,6 @@
         <h2 class="mb-4">Skills & Tools</h2>
         <div class="row">
 
-          <!-- Technical Skills -->
           <div class="col-md-4">
             <h3 class="h5">Technical Skills</h3>
             <ul>
@@ -297,7 +297,6 @@
             </ul>
           </div>
 
-          <!-- Leadership & Collaboration -->
           <div class="col-md-4">
             <h3 class="h5">Engineering Leadership</h3>
             <ul>
@@ -310,7 +309,6 @@
             </ul>
           </div>
 
-          <!-- Core Competencies -->
           <div class="col-md-4">
             <h3 class="h5">Core Competencies</h3>
             <ul>
@@ -342,7 +340,6 @@
         document.body.classList.add('dark-mode');
       }
 
-      // Sync button state + icon
       updateIcon(shouldBeDark);
       const btn = document.querySelector('.mode-toggle');
       if (btn) btn.setAttribute('aria-pressed', String(shouldBeDark));
