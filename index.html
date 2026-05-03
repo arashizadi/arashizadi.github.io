@@ -4,10 +4,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Resume Timeline</title>
+  <title>Arash Izadi | Senior Software Engineer | Platform, Infrastructure, AI Workflows</title>
+  <meta name="description"
+    content="Arash Izadi is a Senior Software Engineer focused on platform infrastructure, reliability engineering, CI/CD automation, observability, cloud security, and AI-assisted development workflows." />
+  <meta name="keywords"
+    content="Arash Izadi, Senior Software Engineer, Platform Engineer, SRE, Infrastructure, AWS, Kubernetes, Terraform, GitHub Actions, Observability, CI/CD, AI workflows, LLMs, Multi-agent systems" />
+  <meta name="author" content="Arash Izadi" />
+  <link rel="canonical" href="https://arashizadi.com/" />
+  <meta property="og:title" content="Arash Izadi | Senior Software Engineer" />
+  <meta property="og:description"
+    content="Platform, infrastructure, reliability engineering, CI/CD automation, observability, and AI-assisted development workflows." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://arashizadi.com/" />
+  <meta property="profile:first_name" content="Arash" />
+  <meta property="profile:last_name" content="Izadi" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Arash Izadi",
+    "url": "https://arashizadi.com/",
+    "email": "mailto:thisisarash@proton.me",
+    "jobTitle": "Senior Software Engineer",
+    "description": "Senior Software Engineer focused on platform infrastructure, reliability engineering, CI/CD automation, observability, cloud security, and AI-assisted development workflows.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Temecula",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://github.com/arashizadi",
+      "https://linkedin.com/in/arashizadi"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "RVO Health"
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Colorado Boulder"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "CUNY New York City College of Technology"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "CUNY Queensborough Community College"
+      }
+    ],
+    "knowsAbout": [
+      "Platform Engineering",
+      "Infrastructure",
+      "Site Reliability Engineering",
+      "AWS",
+      "Kubernetes",
+      "Terraform",
+      "GitHub Actions",
+      "CI/CD Automation",
+      "Observability",
+      "Incident Response",
+      "Cloud Security",
+      "Ruby on Rails",
+      "Go",
+      "Scala",
+      "Python",
+      "AI-assisted development workflows",
+      "LLM tooling",
+      "Multi-agent systems"
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "name": "M.S. in Computer Science",
+        "recognizedBy": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Colorado Boulder"
+        }
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "name": "B.Tech. in Emerging Media Technology",
+        "recognizedBy": {
+          "@type": "CollegeOrUniversity",
+          "name": "CUNY New York City College of Technology"
+        }
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "certification",
+        "name": "Azure Fundamentals and Azure AI Fundamentals"
+      }
+    ],
+    "subjectOf": {
+      "@type": "Event",
+      "name": "Intuit Open Source Meetup | Platform Engineering & AI",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "San Diego, California"
+      },
+      "performer": {
+        "@type": "Person",
+        "name": "Arash Izadi"
+      },
+      "description": "Presented 'What is Devbox and why you need it?' on reproducible developer environments, onboarding speed, and CI consistency.",
+      "url": "https://vimeo.com/1187943347?fl=pl&fe=sh#t=35m40s"
+    }
+  }
+  </script>
 
   <style>
     body.dark-mode {
@@ -494,7 +606,6 @@
       const speaking = Array.from(document.querySelectorAll('h2'))
         .find((heading) => heading.textContent.includes('Speaking & Community'))
         ?.parentElement.querySelectorAll('li');
-
       return {
         name: document.querySelector('h1')?.textContent.trim() || 'Arash Izadi',
         title: document.querySelector('.col-md-6 p.mb-0')?.textContent.trim() || 'Senior Software Engineer',
@@ -600,42 +711,57 @@
   <style>
     @page {
       size: letter;
-      margin: 0.45in;
+      margin: 0.35in;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
     body {
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
+      padding: 0;
+      font-family: Georgia, "Times New Roman", serif;
       color: #18212b;
       background: #ffffff;
       line-height: 1.32;
-      font-size: 12px;
+      font-size: 11.5px;
+      letter-spacing: 0;
+      font-variant-ligatures: none;
+      font-feature-settings: "liga" 0, "clig" 0;
+      font-synthesis: none;
     }
 
     .resume-sheet {
-      max-width: 8.5in;
-      margin: 0 auto;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0;
     }
 
     .header {
       border-bottom: 2px solid #18212b;
-      padding-bottom: 10px;
-      margin-bottom: 12px;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .header h1 {
       margin: 0 0 4px;
-      font-size: 26px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 24px;
       line-height: 1.05;
     }
 
     .header .title {
       margin: 0 0 6px;
-      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
       font-weight: 700;
     }
 
@@ -645,6 +771,8 @@
       display: flex;
       flex-wrap: wrap;
       gap: 6px 12px;
+      font-family: Tahoma, Verdana, Arial, sans-serif;
+      letter-spacing: 0.01em;
     }
 
     .header .meta a,
@@ -657,6 +785,12 @@
       display: inline-flex;
       align-items: center;
       gap: 4px;
+    }
+
+    .contact-item.location-item {
+      font-family: Tahoma, Verdana, Arial, sans-serif;
+      font-size: 11.5px;
+      letter-spacing: 0.015em;
     }
 
     .contact-icon {
@@ -676,12 +810,13 @@
     }
 
     .section {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .section h2 {
-      margin: 0 0 6px;
-      font-size: 12px;
+      margin: 0 0 4px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: #405261;
@@ -689,25 +824,27 @@
 
     .summary {
       margin: 0;
+      margin-bottom: 4px;
     }
 
     .experience-item {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       break-inside: avoid;
     }
 
     .experience-item h3 {
-      margin: 0 0 3px;
-      font-size: 12px;
+      margin: 0 0 2px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
     }
 
     ul {
       margin: 0;
-      padding-left: 16px;
+      padding-left: 14px;
     }
 
     li + li {
-      margin-top: 2px;
+      margin-top: 3px;
     }
 
     .skills-list {
@@ -761,12 +898,24 @@
     }
 
     function escapeHtml(value) {
-      return String(value)
+      return normalizePdfText(String(value))
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#39;');
+    }
+
+    function normalizePdfText(value) {
+      return value
+        .replace(/[\u2018\u2019]/g, "'")
+        .replace(/[\u201C\u201D]/g, '"')
+        .replace(/[\u2013\u2014]/g, '-')
+        .replace(/\u2026/g, '...')
+        .replace(/\u00A0/g, ' ')
+        .replace(/\u200B/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
     }
 
     function buildPdfLink(icon, href, label) {
@@ -776,7 +925,7 @@
 
     function buildPdfTextItem(icon, label) {
       if (!label) return '';
-      return '<span class="contact-item"><span class="contact-icon">' + getBootstrapIconSvg(icon) + '</span><span>' + escapeHtml(label) + '</span></span>';
+      return '<span class="contact-item location-item"><span class="contact-icon">' + getBootstrapIconSvg(icon) + '</span><span>' + escapeHtml(label) + '</span></span>';
     }
 
     function getBootstrapIconSvg(name) {
