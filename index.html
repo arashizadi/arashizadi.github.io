@@ -33,11 +33,13 @@
       color: #cfcfcf !important;
     }
 
-    .mode-toggle {
+    .header-icon-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.5rem 0.75rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0;
       border-radius: 0.375rem;
       background-color: rgba(250, 250, 250, 0.85);
       color: #000;
@@ -46,7 +48,11 @@
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    body.dark-mode .mode-toggle {
+    .header-icon-button i {
+      font-size: 1rem;
+    }
+
+    body.dark-mode .header-icon-button {
       background-color: rgba(70, 70, 70, 0.9);
       color: #fff;
       box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
@@ -56,6 +62,29 @@
       background-color: #2a2a2a;
       color: #ffffff;
       box-shadow: none;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: 768px) {
+      .header-actions {
+        justify-content: flex-end;
+      }
+    }
+
+    .pdf-print-frame {
+      position: fixed;
+      width: 0;
+      height: 0;
+      border: 0;
+      visibility: hidden;
+      pointer-events: none;
     }
 
     body.dark-mode .accordion-item {
@@ -69,7 +98,7 @@
     }
 
     /* Keyboard focus visibility */
-    .mode-toggle:focus-visible,
+    .header-icon-button:focus-visible,
     .accordion-button:focus-visible,
     a:focus-visible {
       outline: 3px solid currentColor;
@@ -82,7 +111,7 @@
       body,
       .accordion-button,
       .accordion-body,
-      .mode-toggle {
+      .header-icon-button {
         transition: none !important;
       }
 
@@ -108,14 +137,27 @@
 
       <div class="col-md-6 text-md-end">
         <!-- Top-right action row: button sits ABOVE the contact list, aligned right -->
-        <div class="d-flex justify-content-md-end justify-content-start mb-2">
-          <button type="button" class="btn btn-sm btn-outline-secondary mode-toggle" onclick="toggleMode()"
-            aria-label="Toggle dark mode" aria-pressed="false">
+        <div class="header-actions mb-2">
+          <button type="button" class="btn btn-sm header-icon-button" onclick="downloadResumePdf()"
+            aria-label="Download one-page PDF resume" title="Download one-page PDF resume">
+            <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+            <span class="visually-hidden">Download one-page PDF resume</span>
+          </button>
+          <button type="button" class="btn btn-sm header-icon-button" onclick="toggleMode()" data-theme-toggle
+            aria-label="Toggle dark mode" title="Toggle dark mode" aria-pressed="false">
             <i class="bi bi-moon-fill" aria-hidden="true"></i>
+            <span class="visually-hidden">Toggle dark mode</span>
           </button>
         </div>
 
         <ul class="list-unstyled mb-0">
+          <li>
+            <i class="bi bi-globe2 me-2" aria-hidden="true"></i>
+            <a href="https://arashizadi.com" target="_blank" rel="noopener noreferrer">
+              arashizadi.com <span class="visually-hidden">(opens in new tab)</span>
+            </a>
+          </li>
+
           <li>
             <i class="bi bi-envelope-fill me-2" aria-hidden="true"></i>
             <a href="mailto:thisisarash@proton.me">thisisarash@proton.me</a>
@@ -281,6 +323,41 @@
         </div>
       </div>
 
+      <div class="container my-5">
+        <h2 class="mb-4">Education & Certifications</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <ul>
+              <li>M.S. in Computer Science, University of Colorado Boulder, in progress (remote part-time, expected 2030).</li>
+              <li>B.Tech. in Emerging Media Technology, CUNY New York City College of Technology, 2021.</li>
+              <li>A.A.S. in Music Production, CUNY Queensborough Community College, 2018.</li>
+            </ul>
+          </div>
+
+          <div class="col-md-6">
+            <ul>
+              <li>Azure Fundamentals and Azure AI Fundamentals, Microsoft Learn, 2020.</li>
+              <li>A+ and CCNA coursework and certification track exposure, 2016.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container my-5">
+        <h2 class="mb-4">Speaking & Community</h2>
+        <ul>
+          <li>
+            Speaker, Intuit Open Source Meetup | Platform Engineering & AI (San Diego, April 2026):
+            Presented "What is Devbox and why you need it?" on reproducible developer environments, onboarding speed,
+            and CI consistency.
+            <a href="https://vimeo.com/1187943347?fl=pl&fe=sh#t=35m40s" target="_blank" rel="noopener noreferrer">
+              Watch talk <span class="visually-hidden">(opens in new tab)</span>
+            </a>
+          </li>
+          <li>Active in open source and engineering meetups across San Diego, Irvine, and Los Angeles.</li>
+        </ul>
+      </div>
+
       <!-- Skills Section -->
       <div class="container my-5">
         <h2 class="mb-4">Skills & Tools</h2>
@@ -293,6 +370,7 @@
               <li>Git, gh, GitHub, GitHub Actions, CI/CD Automation</li>
               <li>Scala, Golang, Bash, Scala.js, Python, Ruby on Rails</li>
               <li>AWS: EC2, RDS, Lambda, IAM, Secrets Manager, S3, Route53</li>
+              <li>GCP exposure via Terraform-based academic and project work</li>
               <li>Datadog, Splunk, CloudWatch</li>
               <li>PostgreSQL, REST APIs</li>
               <li>CLI Tooling, macOS, Windows, Linux</li>
@@ -320,8 +398,9 @@
               <li>Service Reliability Engineering (SRE)</li>
               <li>SLI/SLO Definition & Operational Excellence</li>
               <li>Monitoring & Observability Strategy</li>
+              <li>Incident Response & Production Support</li>
               <li>Cloud Cost Optimization & Infrastructure Efficiency</li>
-              <li>Secure System Design & Least-Privilege IAM</li>
+              <li>Secure Architecture, Compliance & Least-Privilege IAM</li>
               <li>Live Debugging in Monolithic & Microservice Architectures</li>
               <li>Agile / Kanban Delivery Methodology</li>
             </ul>
@@ -345,7 +424,7 @@
       }
 
       updateIcon(shouldBeDark);
-      const btn = document.querySelector('.mode-toggle');
+      const btn = document.querySelector('[data-theme-toggle]');
       if (btn) btn.setAttribute('aria-pressed', String(shouldBeDark));
     })();
 
@@ -354,15 +433,362 @@
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
       updateIcon(isDark);
 
-      const btn = document.querySelector('.mode-toggle');
+      const btn = document.querySelector('[data-theme-toggle]');
       if (btn) btn.setAttribute('aria-pressed', String(isDark));
     }
 
     function updateIcon(isDark) {
-      const icon = document.querySelector('.mode-toggle i');
+      const icon = document.querySelector('[data-theme-toggle] i');
       if (!icon) return;
       icon.classList.toggle('bi-moon-fill', !isDark);
       icon.classList.toggle('bi-sun-fill', isDark);
+    }
+
+    function downloadResumePdf() {
+      const context = extractResumeContext();
+      const existingFrame = document.getElementById('pdf-print-frame');
+      if (existingFrame) existingFrame.remove();
+
+      const frame = document.createElement('iframe');
+      frame.id = 'pdf-print-frame';
+      frame.className = 'pdf-print-frame';
+      frame.setAttribute('title', 'Printable resume');
+      document.body.appendChild(frame);
+
+      frame.onload = function () {
+        const printWindow = frame.contentWindow;
+        if (!printWindow) return;
+
+        printWindow.focus();
+        printWindow.print();
+      };
+
+      frame.srcdoc = buildPdfDocument(context);
+    }
+
+    function extractResumeContext() {
+      const timelineItems = Array.from(document.querySelectorAll('#timelineAccordion > .accordion-item'));
+      const experiences = timelineItems.map((item) => {
+        const title = item.querySelector('.accordion-button')?.textContent.trim() || '';
+        const bullets = Array.from(item.querySelectorAll('.accordion-body li'))
+          .map((li) => li.textContent.trim())
+          .filter(Boolean);
+
+        return { title, bullets };
+      }).filter((entry) => entry.title && entry.bullets.length);
+
+      const skills = Array.from(document.querySelectorAll('.container.my-5 .row .col-md-4 li'))
+        .map((li) => li.textContent.trim())
+        .filter(Boolean);
+
+      const emailLink = document.querySelector('a[href^="mailto:"]');
+      const websiteLink = Array.from(document.querySelectorAll('a'))
+        .find((link) => link.href.includes('arashizadi.com'));
+      const githubLink = Array.from(document.querySelectorAll('a'))
+        .find((link) => link.href.includes('github.com'));
+      const linkedinLink = Array.from(document.querySelectorAll('a'))
+        .find((link) => link.href.includes('linkedin.com'));
+      const education = Array.from(document.querySelectorAll('h2'))
+        .find((heading) => heading.textContent.includes('Education & Certifications'))
+        ?.parentElement.querySelectorAll('li');
+      const speaking = Array.from(document.querySelectorAll('h2'))
+        .find((heading) => heading.textContent.includes('Speaking & Community'))
+        ?.parentElement.querySelectorAll('li');
+
+      return {
+        name: document.querySelector('h1')?.textContent.trim() || 'Arash Izadi',
+        title: document.querySelector('.col-md-6 p.mb-0')?.textContent.trim() || 'Senior Software Engineer',
+        location: document.querySelector('.text-muted')?.textContent.trim() || '',
+        email: emailLink?.textContent.trim() || '',
+        emailHref: emailLink?.href || '',
+        website: websiteLink?.textContent.replace('(opens in new tab)', '').trim() || '',
+        websiteHref: websiteLink?.href || '',
+        github: githubLink?.textContent.replace('(opens in new tab)', '').trim() || '',
+        githubHref: githubLink?.href || '',
+        linkedin: linkedinLink?.textContent.replace('(opens in new tab)', '').trim() || '',
+        linkedinHref: linkedinLink?.href || '',
+        summary: buildSummary(experiences, skills),
+        experiences: condenseExperiences(experiences),
+        skills: condenseSkills(skills),
+        education: Array.from(education || []).map((li) => li.textContent.trim()).filter(Boolean).slice(0, 5),
+        speaking: Array.from(speaking || [])
+          .map((li) => li.textContent.replace(/Watch talk\s*\(opens in new tab\)\s*$/i, '').trim())
+          .filter(Boolean)
+          .slice(0, 2)
+      };
+    }
+
+    function buildSummary(experiences, skills) {
+      const latestRole = experiences[0]?.title || 'Senior Software Engineer';
+      const aiSignal = skills.find((skill) => /LLM|AI|Prompt Engineering/i.test(skill));
+      const platformSignal = skills.find((skill) => /Kubernetes|Terraform|AWS|SRE/i.test(skill));
+
+      return [
+        latestRole.replace(/^\d{4}\s*-\s*(Present|\d{4}):\s*/i, ''),
+        'focused on platform infrastructure, reliability engineering, CI/CD automation, observability, and secure developer workflows',
+        aiSignal ? 'with practical experience applying AI and multi-agent systems to streamline engineering execution' : '',
+        platformSignal ? 'across cloud-native and production systems' : ''
+      ].filter(Boolean).join(' ');
+    }
+
+    function condenseExperiences(experiences) {
+      const maxRoles = 4;
+      const bulletBudgetByRole = [4, 3, 2, 2];
+
+      return experiences.slice(0, maxRoles).map((experience, index) => ({
+        title: experience.title,
+        bullets: experience.bullets.slice(0, bulletBudgetByRole[index] || 2)
+      }));
+    }
+
+    function condenseSkills(skills) {
+      const preferredSkills = [
+        /Distributed Systems/i,
+        /SRE|Reliability/i,
+        /Kubernetes/i,
+        /Terraform/i,
+        /GitHub Actions|CI\/CD/i,
+        /AWS/i,
+        /Datadog|Splunk|CloudWatch|Observability/i,
+        /Go|Golang|Ruby on Rails|Python|Scala/i,
+        /Security|IAM|Compliance/i,
+        /LLM|AI|RAG|Prompt Engineering/i
+      ];
+
+      const selected = [];
+
+      preferredSkills.forEach((pattern) => {
+        const match = skills.find((skill) => pattern.test(skill) && !selected.includes(skill));
+        if (match) selected.push(match);
+      });
+
+      skills.forEach((skill) => {
+        if (selected.length >= 8) return;
+        if (!selected.includes(skill)) selected.push(skill);
+      });
+
+      return selected.slice(0, 8);
+    }
+
+    function buildPdfDocument(context) {
+      const experienceMarkup = context.experiences.map((experience) => `
+        <section class="experience-item">
+          <h3>${escapeHtml(experience.title)}</h3>
+          <ul>
+            ${experience.bullets.map((bullet) => `<li>${escapeHtml(bullet)}</li>`).join('')}
+          </ul>
+        </section>
+      `).join('');
+
+      const skillMarkup = context.skills.map((skill) => `<li>${escapeHtml(skill)}</li>`).join('');
+      const educationMarkup = context.education.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
+      const speakingMarkup = context.speaking.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
+      const contactMarkup = [
+        buildPdfTextItem('geo-alt-fill', context.location),
+        buildPdfLink('envelope-fill', context.emailHref, context.email),
+        buildPdfLink('globe2', context.websiteHref, context.website),
+        buildPdfLink('github', context.githubHref, context.github),
+        buildPdfLink('linkedin', context.linkedinHref, context.linkedin)
+      ].filter(Boolean).join('');
+
+      return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>${escapeHtml(context.name)} Resume</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 0.45in;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #18212b;
+      background: #ffffff;
+      line-height: 1.32;
+      font-size: 12px;
+    }
+
+    .resume-sheet {
+      max-width: 8.5in;
+      margin: 0 auto;
+    }
+
+    .header {
+      border-bottom: 2px solid #18212b;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .header h1 {
+      margin: 0 0 4px;
+      font-size: 26px;
+      line-height: 1.05;
+    }
+
+    .header .title {
+      margin: 0 0 6px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .header .meta {
+      font-size: 11px;
+      color: #405261;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 12px;
+    }
+
+    .header .meta a,
+    .header .meta a:visited {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .contact-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 12px;
+      height: 12px;
+      line-height: 1;
+      flex: 0 0 12px;
+    }
+
+    .contact-icon svg {
+      width: 12px;
+      height: 12px;
+      fill: currentColor;
+    }
+
+    .section {
+      margin-bottom: 12px;
+    }
+
+    .section h2 {
+      margin: 0 0 6px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #405261;
+    }
+
+    .summary {
+      margin: 0;
+    }
+
+    .experience-item {
+      margin-bottom: 8px;
+      break-inside: avoid;
+    }
+
+    .experience-item h3 {
+      margin: 0 0 3px;
+      font-size: 12px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 16px;
+    }
+
+    li + li {
+      margin-top: 2px;
+    }
+
+    .skills-list {
+      columns: 2;
+      column-gap: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <main class="resume-sheet">
+    <header class="header">
+      <h1>${escapeHtml(context.name)}</h1>
+      <p class="title">${escapeHtml(context.title)}</p>
+      <div class="meta">${contactMarkup}</div>
+    </header>
+
+    <section class="section">
+      <h2>Summary</h2>
+      <p class="summary">${escapeHtml(context.summary)}</p>
+    </section>
+
+    <section class="section">
+      <h2>Selected Experience</h2>
+      ${experienceMarkup}
+    </section>
+
+    <section class="section">
+      <h2>Core Skills</h2>
+      <ul class="skills-list">
+        ${skillMarkup}
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Education</h2>
+      <ul>
+        ${educationMarkup}
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Speaking & Community</h2>
+      <ul>
+        ${speakingMarkup}
+      </ul>
+    </section>
+  </main>
+</body>
+</html>`;
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function buildPdfLink(icon, href, label) {
+      if (!href || !label) return '';
+      return '<span class="contact-item"><span class="contact-icon">' + getBootstrapIconSvg(icon) + '</span><a href="' + escapeHtml(href) + '">' + escapeHtml(label) + '</a></span>';
+    }
+
+    function buildPdfTextItem(icon, label) {
+      if (!label) return '';
+      return '<span class="contact-item"><span class="contact-icon">' + getBootstrapIconSvg(icon) + '</span><span>' + escapeHtml(label) + '</span></span>';
+    }
+
+    function getBootstrapIconSvg(name) {
+      const icons = {
+        'geo-alt-fill': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 16s6-5.686 6-10A6 6 0 1 0 2 6c0 4.314 6 10 6 10zm0-7.5A2.5 2.5 0 1 1 8 3a2.5 2.5 0 0 1 0 5.5z"/></svg>',
+        'envelope-fill': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555z"/><path d="M0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.143L9.239 8.83 8 9.586 6.761 8.83zM16 4.697l-5.803 3.546L16 11.801V4.697z"/></svg>',
+        'globe2': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8.5 6.938c1.78-.69 3.138-2.34 3.635-4.438H9.5v4.438zm-1 0V10.5H3.865c.497 2.098 1.856 3.748 3.635 4.438zM2.828 9.5H7.5V6.5H2.828A7.03 7.03 0 0 0 2 8c0 .516.055 1.02.158 1.5.211 0 .426 0 .67 0zm5.672 0h4.672c.103-.48.158-.984.158-1.5 0-.516-.055-1.02-.158-1.5H8.5v3zm3.635-4c-.497-2.098-1.856-3.748-3.635-4.438V5.5h3.635zm-4.635 0V1.062C5.721 1.752 4.362 3.402 3.865 5.5H7.5z"/></svg>',
+        'github': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>',
+        'linkedin': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708C16 15.487 15.474 16 14.825 16H1.175C.526 16 0 15.487 0 14.854V1.146zM4.943 13.5V6.169H2.542V13.5h2.401zm-1.2-8.333c.837 0 1.358-.554 1.358-1.248-.015-.71-.521-1.248-1.342-1.248C2.938 2.67 2.4 3.21 2.4 3.92c0 .694.52 1.248 1.327 1.248h.016zm4.908 8.333V9.359c0-.221.016-.443.082-.601.18-.443.59-.902 1.278-.902.902 0 1.263.68 1.263 1.677V13.5h2.4V9.255c0-2.274-1.212-3.332-2.83-3.332-1.304 0-1.89.714-2.216 1.218h.016V6.169H6.543c.03.634 0 7.331 0 7.331h2.108z"/></svg>'
+      };
+
+      return icons[name] || '';
     }
   </script>
 
