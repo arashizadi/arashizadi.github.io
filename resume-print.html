@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arash Izadi Resume</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 0.35in;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #18212b;
+      background: #fff;
+      line-height: 1.28;
+      font-size: 11.5px;
+    }
+
+    .resume-sheet {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      border-bottom: 2px solid #18212b;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+
+    .header h1 {
+      margin: 0 0 4px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 24px;
+      line-height: 1.05;
+    }
+
+    .header .title {
+      margin: 0 0 6px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .header .meta {
+      font-size: 11px;
+      color: #405261;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 12px;
+      font-family: Tahoma, Verdana, Arial, sans-serif;
+      letter-spacing: 0.01em;
+    }
+
+    .header .meta a,
+    .header .meta a:visited {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .contact-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 12px;
+      height: 12px;
+      line-height: 1;
+      flex: 0 0 12px;
+    }
+
+    .contact-icon svg {
+      width: 12px;
+      height: 12px;
+      fill: currentColor;
+    }
+
+    .summary {
+      margin: 0 0 6px;
+    }
+
+    .section {
+      margin-bottom: 10px;
+    }
+
+    .section h2 {
+      margin: 0 0 4px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #405261;
+    }
+
+    .experience-item {
+      margin-bottom: 6px;
+      break-inside: avoid;
+    }
+
+    .experience-item h3 {
+      margin: 0 0 2px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 14px;
+    }
+
+    li + li {
+      margin-top: 3px;
+    }
+
+    .skills-list {
+      columns: 2;
+      column-gap: 20px;
+    }
+
+    .agent-context {
+      position: fixed;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 0;
+      overflow: visible;
+      pointer-events: none;
+    }
+
+    .full-context {
+      margin: 0;
+      font-size: 1px;
+      line-height: 1;
+      color: #fff;
+      white-space: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="resume-sheet">
+    <header class="header">
+      <h1>Arash Izadi</h1>
+      <p class="title">Senior Software Engineer</p>
+      <div class="meta">
+        <span class="contact-item"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16" aria-hidden="true">
+              <path
+                d="M8 16s6-5.686 6-10A6 6 0 1 0 2 6c0 4.314 6 10 6 10zm0-7.5A2.5 2.5 0 1 1 8 3a2.5 2.5 0 0 1 0 5.5z" />
+            </svg></span><span>Temecula, CA</span></span>
+        <span class="contact-item"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555z" />
+              <path
+                d="M0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.143L9.239 8.83 8 9.586 6.761 8.83zM16 4.697l-5.803 3.546L16 11.801V4.697z" />
+            </svg></span><a href="mailto:thisisarash@proton.me">thisisarash@proton.me</a></span>
+        <span class="contact-item"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16" aria-hidden="true">
+              <path
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8.5 6.938c1.78-.69 3.138-2.34 3.635-4.438H9.5v4.438zm-1 0V10.5H3.865c.497 2.098 1.856 3.748 3.635 4.438zM2.828 9.5H7.5V6.5H2.828A7.03 7.03 0 0 0 2 8c0 .516.055 1.02.158 1.5.211 0 .426 0 .67 0zm5.672 0h4.672c.103-.48.158-.984.158-1.5 0-.516-.055-1.02-.158-1.5H8.5v3zm3.635-4c-.497-2.098-1.856-3.748-3.635-4.438V5.5h3.635zm-4.635 0V1.062C5.721 1.752 4.362 3.402 3.865 5.5H7.5z" />
+            </svg></span><a href="https://arashizadi.com">arashizadi.com</a></span>
+        <span class="contact-item"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16" aria-hidden="true">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+            </svg></span><a href="https://github.com/arashizadi">github.com/arashizadi</a></span>
+        <span class="contact-item"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16" aria-hidden="true">
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708C16 15.487 15.474 16 14.825 16H1.175C.526 16 0 15.487 0 14.854V1.146zM4.943 13.5V6.169H2.542V13.5h2.401zm-1.2-8.333c.837 0 1.358-.554 1.358-1.248-.015-.71-.521-1.248-1.342-1.248C2.938 2.67 2.4 3.21 2.4 3.92c0 .694.52 1.248 1.327 1.248h.016zm4.908 8.333V9.359c0-.221.016-.443.082-.601.18-.443.59-.902 1.278-.902.902 0 1.263.68 1.263 1.677V13.5h2.4V9.255c0-2.274-1.212-3.332-2.83-3.332-1.304 0-1.89.714-2.216 1.218h.016V6.169H6.543c.03.634 0 7.331 0 7.331h2.108z" />
+            </svg></span><a href="https://linkedin.com/in/arashizadi">linkedin.com/in/arashizadi</a></span>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Summary</h2>
+      <p class="summary">Senior Software Engineer focused on platform infrastructure, reliability engineering, cloud
+        operations, and developer productivity. Experienced in designing and operating AWS/Kubernetes-based systems,
+        modernizing legacy applications, building CI/CD automation, and improving observability across production
+        environments. Hands-on with Terraform, GitHub Actions, Datadog, CloudWatch, Scala, Go, Ruby on Rails, and
+        Python, with practical experience applying AI/LLM tooling to accelerate engineering workflows.</p>
+    </section>
+
+    <section class="section">
+      <h2>Selected Experience</h2>
+
+      <section class="experience-item">
+        <h3>RVO Health - Senior Software Engineer, Platform &amp; Infrastructure (2026 - Present)</h3>
+        <ul>
+          <li>Led platform and infrastructure architecture for application, integration, and AI-assisted engineering
+            workflows across production systems.</li>
+          <li>Improved AWS reliability and operational maturity by automating infrastructure workflows, hardening
+            services, and optimizing performance and cloud cost.</li>
+          <li>Built secure AWS-native platform capabilities using Lambda, IAM, Secrets Manager, S3, and Route53, with
+            emphasis on least-privilege access and auditability.</li>
+          <li>Improved deployment safety and developer velocity by building reusable GitHub Actions CI/CD workflows,
+            standardized release processes, and automated validation.</li>
+        </ul>
+      </section>
+
+      <section class="experience-item">
+        <h3>RVO Health - Senior Associate Platform Engineer - Platform &amp; Infrastructure (2024 - 2026)</h3>
+        <ul>
+          <li>Improved Kubernetes platform reliability by identifying infrastructure risks, driving long-term
+            mitigations, and standardizing operational practices.</li>
+          <li>Modernized legacy applications and integration paths through containerization and standardized Helm-based
+            deployments.</li>
+          <li>Streamlined delivery workflows using GitHub Actions, ArgoCD, and custom Go tooling to reduce manual
+            release overhead.</li>
+          <li>Expanded production observability by integrating Datadog and CloudWatch dashboards, alerts, and service
+            health indicators.</li>
+        </ul>
+      </section>
+
+      <section class="experience-item">
+        <h3>RVO Health - Associate Software Engineer - MVP Launch Team (2023 - 2024)</h3>
+        <ul>
+          <li>Led development of a new MVP initiative under NDA by designing scalable Scala components under tight
+            delivery timelines.</li>
+          <li>Created system design diagrams, technical flowcharts, and implementation plans to align engineers and
+            stakeholders on complex feature behavior.</li>
+        </ul>
+      </section>
+
+      <section class="experience-item">
+        <h3>Optum/RVO Health - TDP/Associate Software Engineer - Core Product Team (2022 - 2023)</h3>
+        <ul>
+          <li>Built secure Scala microservices supporting regulated healthcare workflows with compliance, reliability,
+            and maintainability requirements.</li>
+          <li>Developed REST APIs and PostgreSQL-backed integration points to improve data consistency across internal
+            and external systems.
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="section">
+      <h2>Core Skills</h2>
+      <ul class="skills-list">
+        <li>Distributed systems and reliability engineering</li>
+        <li>AWS, Kubernetes, Docker, Helm, Terraform</li>
+        <li>GitHub, GitHub Actions, CI/CD automation</li>
+        <li>Observability with Datadog, Splunk, and CloudWatch</li>
+        <li>GCP exposure through Terraform-based academic and project work</li>
+        <li>Ruby on Rails, Go, Scala, Python, Bash</li>
+        <li>Service health indicators, operational metrics, and incident response</li>
+        <li>Security, compliance, IAM, and auditability</li>
+        <li>System design, full-stack development, integration engineering</li>
+        <li>Developer tooling, platform automation, and application modernization</li>
+        <li>Prompt engineering, RAG systems, LLM context management, internal AI tooling</li>
+        <li>Multi-agent workflow design for parallel engineering execution</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Education</h2>
+      <ul>
+        <li>B.Tech. in Emerging Media Technology, CUNY New York City College of Technology, 2021</li>
+        <li>A.A.S. in Music Production, CUNY Queensborough Community College, 2018</li>
+        <li>Azure Fundamentals and Azure AI Fundamentals, Microsoft Learn, 2020</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Speaking &amp; Community</h2>
+      <ul>
+        <li>Speaker, Intuit Open Source Meetup | Platform Engineering &amp; AI (San Diego, April 2026): Presented
+          "What is Devbox and why you need it?" on reproducible developer environments, onboarding speed, and CI
+          consistency.</li>
+        <li>Active in open source and engineering meetups across San Diego, Irvine, and Los Angeles.</li>
+      </ul>
+    </section>
+
+    <section class="agent-context">
+      <p class="full-context">Arash Izadi. Senior Software Engineer. Temecula, CA. thisisarash@proton.me.
+        arashizadi.com. github.com/arashizadi. linkedin.com/in/arashizadi. Senior Software Engineer focused on
+        platform infrastructure, reliability engineering, cloud operations, and developer productivity. Experienced in
+        designing and operating AWS/Kubernetes-based systems, modernizing legacy applications, building CI/CD
+        automation, and improving observability across production environments. Hands-on with Terraform, GitHub
+        Actions, Datadog, CloudWatch, Scala, Go, Ruby on Rails, and Python, with practical experience applying AI/LLM
+        tooling to accelerate engineering workflows. RVO Health - Senior Software Engineer, Platform &amp; Infrastructure
+        (2026 - Present): Led platform and infrastructure architecture for application, integration, and AI-assisted
+        engineering workflows across production systems. Improved AWS reliability and operational maturity by
+        automating infrastructure workflows, hardening services, and optimizing performance and cloud cost. Built secure
+        AWS-native platform capabilities using Lambda, IAM, Secrets Manager, S3, and Route53, with emphasis on
+        least-privilege access and auditability. Improved deployment safety and developer velocity by building reusable
+        GitHub Actions CI/CD workflows, standardized release processes, and automated validation. RVO Health - Senior
+        Associate Platform Engineer - Platform &amp; Infrastructure (2024 - 2026): Improved Kubernetes platform
+        reliability by identifying infrastructure risks, driving long-term mitigations, and standardizing operational
+        practices. Modernized legacy applications and integration paths through containerization and standardized
+        Helm-based deployments. Streamlined delivery workflows using GitHub Actions, ArgoCD, and custom Go tooling to
+        reduce manual release overhead. Expanded production observability by integrating Datadog and CloudWatch
+        dashboards, alerts, and service health indicators. RVO Health - Associate Software Engineer - MVP Launch Team
+        (2023 - 2024): Led development of a new MVP initiative under NDA by designing scalable Scala components under
+        tight delivery timelines. Created system design diagrams, technical flowcharts, and implementation plans to
+        align engineers and stakeholders on complex feature behavior. Optum/RVO Health - TDP/Associate Software
+        Engineer - Core Product Team (2022 - 2023): Built secure Scala microservices supporting regulated healthcare workflows with
+        compliance, reliability, and maintainability requirements. Developed REST APIs and
+        PostgreSQL-backed integration points to improve data consistency across internal and external systems. Core
+        skills: Distributed systems and reliability engineering, AWS, Kubernetes, Docker, Helm, Terraform, GitHub,
+        GitHub Actions, CI/CD automation, Observability with Datadog, Splunk, and CloudWatch, Ruby on Rails, Go, Scala,
+        Python, Bash, Service health indicators, operational metrics, incident response, Security, compliance, IAM,
+        auditability, System design, full-stack development, integration engineering, Developer tooling, platform
+        automation, application modernization, Prompt engineering, RAG systems, LLM context management, internal AI
+        tooling, Multi-agent workflow design for parallel engineering execution. Education: B.Tech. in Emerging Media
+        Technology, CUNY New York City College of Technology, 2021. A.A.S. in Music Production, CUNY Queensborough
+        Community College, 2018. Azure Fundamentals and Azure AI Fundamentals, Microsoft Learn, 2020. Speaking and
+        community: Speaker, Intuit Open Source Meetup | Platform Engineering &amp; AI (San Diego, April 2026):
+        Presented "What is Devbox and why you need it?" on reproducible developer environments, onboarding speed, and
+        CI consistency. Active in open source and engineering meetups across San Diego, Irvine, and Los Angeles.</p>
+    </section>
+  </main>
+</body>
+
+</html>
