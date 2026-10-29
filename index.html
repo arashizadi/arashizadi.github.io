@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arash Izadi | Senior Software Engineer | Platform, Infrastructure, Reliability, AI Workflows</title>
+  <title>Arash Izadi | Senior Software Engineer | Platform, Infrastructure, Reliability</title>
   <meta name="description"
-    content="Arash Izadi is a Senior Software Engineer focused on platform infrastructure, reliability engineering, cloud operations, developer productivity, CI/CD automation, observability, and AI-assisted development workflows." />
+    content="Arash Izadi is a Senior Software Engineer who builds and runs AWS/Kubernetes platforms, release pipelines, access control, and observability for HIPAA- and SOC 2-regulated healthcare products." />
   <meta name="keywords"
-    content="Arash Izadi, Senior Software Engineer, Platform Engineer, SRE, Infrastructure, Reliability Engineering, Developer Productivity, System Design, Full-Stack Development, Integration Engineering, Application Modernization, AWS, Kubernetes, Terraform, GitHub Actions, Observability, CI/CD, AI workflows, LLMs, Multi-agent systems" />
+    content="Arash Izadi, Senior Software Engineer, Platform Engineer, SRE, Infrastructure, Reliability Engineering, Developer Productivity, System Design, Application Modernization, AWS, EKS, Kubernetes, Terraform, Helm, ArgoCD, GitHub Actions, Go, Scala, Ruby on Rails, Observability, CI/CD, HIPAA, SOC 2" />
   <meta name="author" content="Arash Izadi" />
   <link rel="canonical" href="https://arashizadi.com/" />
   <meta property="og:title" content="Arash Izadi | Senior Software Engineer" />
   <meta property="og:description"
-    content="Platform infrastructure, reliability engineering, cloud operations, developer productivity, CI/CD automation, observability, and AI-assisted development workflows." />
+    content="Platform and infrastructure engineering: AWS/Kubernetes, release pipelines, access control, and observability for regulated healthcare products." />
   <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://arashizadi.com/" />
   <meta property="profile:first_name" content="Arash" />
@@ -28,8 +28,8 @@
     "name": "Arash Izadi",
     "url": "https://arashizadi.com/",
     "email": "mailto:thisisarash@proton.me",
-    "jobTitle": "Senior Software Engineer",
-    "description": "Senior Software Engineer focused on platform infrastructure, reliability engineering, cloud operations, developer productivity, CI/CD automation, observability, cloud security, and AI-assisted development workflows.",
+    "jobTitle": "Senior Software Engineer, Platform & Infrastructure",
+    "description": "Senior Software Engineer who builds and runs AWS/Kubernetes platforms, release pipelines, access control, and observability for HIPAA- and SOC 2-regulated healthcare products.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Temecula",
@@ -52,32 +52,40 @@
       {
         "@type": "CollegeOrUniversity",
         "name": "CUNY Queensborough Community College"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Colorado Boulder"
       }
     ],
+    "award": "2nd place, US-China Young Maker Competition 2026",
     "knowsAbout": [
       "Platform Engineering",
-      "Infrastructure",
-      "Developer Productivity",
-      "System Design",
-      "Full-Stack Development",
-      "Integration Engineering",
-      "Application Modernization",
       "Site Reliability Engineering",
+      "Infrastructure as Code",
+      "Application Modernization",
+      "Release Engineering",
+      "System Design",
       "AWS",
+      "Amazon EKS",
       "Kubernetes",
+      "Helm",
+      "ArgoCD",
       "Terraform",
       "GitHub Actions",
       "CI/CD Automation",
       "Observability",
       "Incident Response",
       "Cloud Security",
-      "Ruby on Rails",
+      "HIPAA",
+      "SOC 2",
       "Go",
       "Scala",
+      "Ruby on Rails",
       "Python",
-      "AI-assisted development workflows",
-      "LLM tooling",
-      "Multi-agent systems"
+      "PostgreSQL",
+      "Developer Productivity",
+      "AI-assisted development workflows"
     ],
     "hasCredential": [
       {
@@ -92,7 +100,7 @@
       {
         "@type": "EducationalOccupationalCredential",
         "credentialCategory": "certification",
-        "name": "Azure Fundamentals and Azure AI Fundamentals"
+        "name": "Microsoft Certified: Azure Fundamentals and Azure AI Fundamentals"
       }
     ],
     "subjectOf": {
@@ -192,6 +200,17 @@
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
+    .intro {
+      max-width: 52rem;
+      font-size: 1.05rem;
+    }
+
+    .role-dates {
+      font-weight: 400;
+      opacity: 0.75;
+      white-space: nowrap;
+    }
+
     /* Keyboard focus visibility */
     .header-icon-button:focus-visible,
     .accordion-button:focus-visible,
@@ -223,7 +242,7 @@
     <div class="row align-items-center">
       <div class="col-md-6">
         <h1 class="mb-1">Arash Izadi</h1>
-        <p class="mb-0">Senior Software Engineer at RVO Health</p>
+        <p class="mb-0">Senior Software Engineer, Platform &amp; Infrastructure at RVO Health</p>
         <p class="text-muted">
           <i class="bi bi-geo-alt-fill me-2" aria-hidden="true"></i>
           Temecula, CA
@@ -275,6 +294,14 @@
       </div>
     </div>
     <hr class="my-4">
+
+    <p class="intro mb-0">
+      I build and run the platform other engineers ship on: AWS and Kubernetes infrastructure, release pipelines,
+      access control, and observability for HIPAA- and SOC 2-regulated healthcare products. I came to software
+      from music production and live A/V work, which is probably why I care so much about tooling that gets out
+      of people's way. Most weeks you will find me writing Go, Terraform, or Rails, reviewing pull requests, or
+      running platform office hours.
+    </p>
   </div>
 
   <!-- Professional Timeline Section -->
@@ -282,228 +309,192 @@
     <h2 class="mb-4">Professional Timeline</h2>
 
     <div class="accordion" id="timelineAccordion">
-      <!-- 2026 - Present Senior SWE -->
+      <!-- Feb 2026 - Present: Senior Software Engineer -->
       <div class="accordion-item">
         <h3 class="accordion-header" id="headingSenior">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSenior"
             aria-expanded="true" aria-controls="collapseSenior">
-            RVO Health - Senior Software Engineer, Platform & Infrastructure (2026 - Present)
+            RVO Health &mdash; Senior Software Engineer, Platform &amp; Infrastructure&nbsp;<span class="role-dates">(Feb 2026 &ndash; Present)</span>
           </button>
         </h3>
         <div id="collapseSenior" class="accordion-collapse collapse show" aria-labelledby="headingSenior"
           data-bs-parent="#timelineAccordion">
           <div class="accordion-body">
             <ul>
-              <li>Led platform and infrastructure architecture for application, integration, and AI-assisted engineering workflows across production systems.</li>
-              <li>Improved AWS reliability and operational maturity by automating infrastructure workflows, hardening services, and optimizing performance and cloud cost.</li>
-              <li>Built secure AWS-native platform capabilities using Lambda, IAM, Secrets Manager, S3, and Route53, with emphasis on least-privilege access and auditability.</li>
-              <li>Improved deployment safety and developer velocity by building reusable GitHub Actions CI/CD workflows, standardized release processes, and automated validation.</li>
-              <li>Improved observability by defining service health indicators, logs, and operational metrics to detect issues early and guide engineering priorities.</li>
-              <li>Strengthen security, compliance, and auditability by enforcing infrastructure standards, access controls, and repeatable operational processes across repositories and environments.</li>
-              <li>Lead full-stack and integration development across Ruby on Rails, Go, APIs, and platform automation codebases, modernizing application architecture to align with infrastructure and operational requirements.</li>
-              <li>Write RFCs, architecture proposals, and technical experiments to evaluate new approaches for scalability, maintainability, and platform evolution.</li>
-              <li>Review and approve pull requests across repositories, enforcing reliability, maintainability, and secure engineering practices.</li>
-              <li>Use AI and LLM tooling to streamline development workflows, and design multi-agent workflows that enable parallel execution across multiple codebases and engineering tasks.</li>
-              <li>Mentor engineers on cloud architecture, infrastructure best practices, operational excellence, and developer tooling.</li>
+              <li>Own platform and release engineering for ~60 microservices across 100+ repositories serving five engineering teams; member of the tech-leads group that reviews architecture and pull requests platform-wide.</li>
+              <li>Re-architected a mission-critical self-managed SFTP subsystem onto AWS Transfer Family with Lambda authentication, per-partner credentials in Secrets Manager, S3 storage, and KMS encryption, provisioned with Terraform and integrated into Rails through a new AWS SDK library.</li>
+              <li>Led an account-wide cost audit that materially reduced AWS spend through ECR lifecycle policies, log-volume reduction, right-sizing, and decommissioning of idle resources.</li>
+              <li>Designed scoped, least-privilege authorization for engineers and services, including just-in-time admin access and per-resource visibility, in a SOC 2 and HIPAA environment.</li>
+              <li>Modernized the core Rails monolith: migrated its database across AWS regions, replaced legacy job systems with Solid Queue and Kubernetes-native jobs, and rewrote jQuery views as modern Rails templates.</li>
+              <li>Write RFCs and architecture proposals, including a design for AWS Bedrock-assisted on-call triage that correlates Jira incidents with Datadog signals.</li>
+              <li>Mentor engineers through weekly platform office hours attended by junior and senior engineers and project managers.</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- 2024 - 2026 Platform Engineer -->
+      <!-- Mar 2024 - Feb 2026: Senior Associate Platform Engineer -->
       <div class="accordion-item">
         <h3 class="accordion-header" id="headingSRE">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseSRE" aria-expanded="false" aria-controls="collapseSRE">
-            RVO Health - Senior Associate Platform Engineer - Platform & Infrastructure (2024 - 2026)
+            RVO Health &mdash; Senior Associate Platform Engineer&nbsp;<span class="role-dates">(Mar 2024 &ndash; Feb 2026)</span>
           </button>
         </h3>
         <div id="collapseSRE" class="accordion-collapse collapse" aria-labelledby="headingSRE"
           data-bs-parent="#timelineAccordion">
           <div class="accordion-body">
             <ul>
-              <li>Improved Kubernetes platform reliability by identifying infrastructure risks, driving long-term mitigations, and standardizing operational practices.</li>
-              <li>Served as infrastructure stakeholder, influenced story breakdown, estimation, and delivery standards across engineering teams.</li>
-              <li>Modernized legacy applications and integration paths through containerization and standardized Helm-based deployments.</li>
-              <li>Streamlined delivery workflows using GitHub Actions, ArgoCD, and custom Go tooling to reduce manual release overhead.</li>
-              <li>Maintained AWS infrastructure using Terraform and Infrastructure as Code practices.</li>
-              <li>Expanded production observability by integrating Datadog and CloudWatch dashboards, alerts, and service health indicators.</li>
-              <li>Acted as GitHub administrator, improving repository governance and enforcing security guardrails.</li>
+              <li>Built the release and promotion pipeline in Go on GitHub Actions, integrating the GitHub and Jira APIs: promotion time cut from hours to minutes (~95%) with a fully auditable trail; adopted as the standard release path across the platform.</li>
+              <li>Hardened EKS with IAM Roles for Service Accounts, VPC CIDR controls, and least-privilege IAM, and enforced service-to-service mTLS with Linkerd policies across all services.</li>
+              <li>Built weekly ECR image vulnerability scanning on a GitHub Actions cron with results published to Slack, so older images are patched against a refreshed CVE database and pass Wiz compliance scans.</li>
+              <li>Containerized legacy VM-based workloads and standardized Helm deployments with ArgoCD, moving manual releases onto a GitOps pipeline.</li>
+              <li>Administered GitHub for 100+ repositories: branch protection, CODEOWNERS, required checks, and secret scanning; migrated CI from Jenkins to GitHub Actions and packages from JFrog Artifactory to GitHub Packages.</li>
+              <li>Managed AWS with Terraform, expanded Datadog and CloudWatch dashboards and alerting, and served on the platform on-call rotation leading incident response and root-cause analysis.</li>
+              <li>Drove Devbox adoption across the engineering organization with a documented bootstrap and self-service onboarding.</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- 2023 - 2024 SWE -->
+      <!-- Jul 2023 - Mar 2024: Senior Associate Software Engineer -->
       <div class="accordion-item">
         <h3 class="accordion-header" id="headingTwo">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            RVO Health - Associate Software Engineer - MVP Launch Team (2023 - 2024)
+            RVO Health &mdash; Senior Associate Software Engineer, MVP Launch Team&nbsp;<span class="role-dates">(Jul 2023 &ndash; Mar 2024)</span>
           </button>
         </h3>
         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
           data-bs-parent="#timelineAccordion">
           <div class="accordion-body">
             <ul>
-              <li>Led development of a new MVP initiative under NDA by designing scalable Scala components under tight delivery timelines.</li>
-              <li>Created system design diagrams, technical flowcharts, and implementation plans to align engineers and stakeholders on complex feature behavior.</li>
-              <li>Modernized legacy systems by refactoring core logic and bridging integrations with current platforms.</li>
-              <li>Supported production readiness through regular code reviews, on-call participation, and timely hotfix delivery.</li>
-              <li>Maintained high code quality by enforcing documentation, automated tests, and peer-reviewed contributions.</li>
+              <li>Shipped a HIPAA-regulated B2B and B2C MVP on schedule with a 10-person team, designing and implementing Scala backend services and event-driven business logic.</li>
+              <li>Produced system diagrams and technical documentation for complex feature flows to align engineers and stakeholders.</li>
+              <li>Supported production readiness through code reviews, on-call rotations, incident response, and hotfix releases.</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- 2022 - 2023 SWE -->
+      <!-- Feb 2022 - Jul 2023: Associate Software Engineer -->
       <div class="accordion-item">
         <h3 class="accordion-header" id="headingThree">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Optum/RVO Health - TDP/Associate Software Engineer - Core Product Team (2022 - 2023)
+            Optum, then RVO Health &mdash; Associate Software Engineer, Core Product&nbsp;<span class="role-dates">(Feb 2022 &ndash; Jul 2023)</span>
           </button>
         </h3>
         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
           data-bs-parent="#timelineAccordion">
           <div class="accordion-body">
             <ul>
-              <li>Built secure Scala microservices supporting regulated healthcare workflows with compliance, reliability, and maintainability requirements.</li>
-              <li>Developed REST APIs and PostgreSQL-backed integration points to improve data consistency across internal and external systems.</li>
-              <li>Used Splunk and Datadog to diagnose issues, optimize services, and ensure operational transparency.</li>
-              <li>Worked on a 24/7 live production system supporting state government clients, ensuring high availability and compliance through monitoring, on-call support, and incident response.</li>
-              <li>Improved software maintainability by writing robust unit tests and documenting legacy behavior for continuity.</li>
+              <li>Joined through Optum's Technology Development Program and converted to a full-time offer after the first rotation; the team moved into RVO Health, the Optum and Red Ventures joint venture, in November 2022.</li>
+              <li>Operated and debugged 24/7 production Scala microservices for state-government healthcare clients under SLA, with Splunk and Datadog for diagnosis and operational visibility.</li>
+              <li>Built PostgreSQL-backed REST APIs and drove root-cause-analysis fixes that reduced incident recurrence.</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- 2019 - 2021 Undergraduate Student -->
+      <!-- 2012 - 2021: Before engineering -->
       <div class="accordion-item">
         <h3 class="accordion-header" id="headingFour">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            2019 - 2021: Undergraduate Student
+            Before engineering&nbsp;<span class="role-dates">(2012 &ndash; 2021)</span>
           </button>
         </h3>
         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
           data-bs-parent="#timelineAccordion">
           <div class="accordion-body">
             <ul>
-              <li>Developed interactive game prototypes using Unity and C# to explore real-time user feedback and game mechanics.</li>
-              <li>Built experimental HCI projects using Arduino, P5.js, and Processing to combine physical interfaces with digital interaction.</li>
-              <li>Explored creative coding and media art by integrating MAX/MSP with sound, visuals, and user input.</li>
+              <li>Composed and produced music for clients, ran live A/V for a CUNY campus media-services office, and handled business development at ZenoRadio, an internet radio startup, where I launched and ran several revenue projects.</li>
+              <li>Changed careers through CUNY City Tech's Emerging Media Technology program and Optum's Technology Development Program.</li>
             </ul>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <!-- Pre-2022 -->
-      <div class="accordion-item">
-        <h3 class="accordion-header" id="headingFive">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-            Pre-2022: Technical Support & Business Management
-          </button>
-        </h3>
-        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-          data-bs-parent="#timelineAccordion">
-          <div class="accordion-body">
-            <ul>
-              <li>Provided desktop support and A/V troubleshooting in educational settings, including setup, diagnostics, and user support.</li>
-              <li>Launched and managed 10+ business initiatives by conducting research, hiring staff, and scaling user growth across global markets.</li>
-              <li>Brought 10+ years of customer service experience across industries, with strong problem-solving skills.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="container my-5">
-        <h2 class="mb-4">Education & Certifications</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <ul>
-              <li>B.Tech. in Emerging Media Technology, CUNY New York City College of Technology, 2021.</li>
-              <li>A.A.S. in Music Production, CUNY Queensborough Community College, 2018.</li>
-            </ul>
-          </div>
-
-          <div class="col-md-6">
-            <ul>
-              <li>Azure Fundamentals and Azure AI Fundamentals, Microsoft Learn, 2020.</li>
-              <li>A+ and CCNA coursework and certification track exposure, 2016.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="container my-5">
-        <h2 class="mb-4">Speaking & Community</h2>
+  <!-- Education Section -->
+  <div class="container my-5">
+    <h2 class="mb-4">Education &amp; Certifications</h2>
+    <div class="row">
+      <div class="col-md-6">
         <ul>
-          <li>
-            Speaker, Intuit Open Source Meetup | Platform Engineering & AI (San Diego, April 2026):
-            Presented "What is Devbox and why you need it?" on reproducible developer environments, onboarding speed,
-            and CI consistency.
-            <a href="https://vimeo.com/1187943347?fl=pl&fe=sh#t=35m40s" target="_blank" rel="noopener noreferrer">
-              Watch talk <span class="visually-hidden">(opens in new tab)</span>
-            </a>
-          </li>
-          <li>Active in open source and engineering meetups across San Diego, Irvine, and Los Angeles.</li>
+          <li>B.Tech. in Emerging Media Technology, CUNY New York City College of Technology, 2021 (Dean's List).</li>
+          <li>A.A.S. in Music Production, CUNY Queensborough Community College, 2018.</li>
+          <li>M.S. in Computer Science, University of Colorado Boulder, in progress (part-time).</li>
         </ul>
       </div>
 
-      <!-- Skills Section -->
-      <div class="container my-5">
-        <h2 class="mb-4">Skills & Tools</h2>
-        <div class="row">
+      <div class="col-md-6">
+        <ul>
+          <li>Microsoft Certified: Azure Fundamentals and Azure AI Fundamentals, 2020.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-          <div class="col-md-4">
-            <h3 class="h5">Technical Skills</h3>
-            <ul>
-              <li>Kubernetes, kubectl, Docker, Helm, Terraform</li>
-              <li>Git, gh, GitHub, GitHub Actions, CI/CD Automation</li>
-              <li>Scala, Golang, Bash, Scala.js, Python, Ruby on Rails</li>
-              <li>System design, full-stack development, integration engineering</li>
-              <li>AWS: EC2, RDS, Lambda, IAM, Secrets Manager, S3, Route53</li>
-              <li>GCP exposure via Terraform-based academic and project work</li>
-              <li>Datadog, Splunk, CloudWatch</li>
-              <li>PostgreSQL, REST APIs</li>
-              <li>CLI Tooling, macOS, Windows, Linux</li>
-              <li>UML, Mermaid, Sequence Diagrams</li>
-              <li>Prompt Engineering, RAG Systems, LLM Context Management, Internal AI/ML Tooling</li>
-            </ul>
-          </div>
+  <!-- Speaking & Honors Section -->
+  <div class="container my-5">
+    <h2 class="mb-4">Speaking &amp; Honors</h2>
+    <ul>
+      <li>
+        Speaker, Intuit Open Source Meetup | Platform Engineering &amp; AI (San Diego, April 2026):
+        Presented "What is Devbox and why you need it?" on reproducible developer environments, onboarding speed,
+        and CI consistency.
+        <a href="https://vimeo.com/1187943347?fl=pl&fe=sh#t=35m40s" target="_blank" rel="noopener noreferrer">
+          Watch talk <span class="visually-hidden">(opens in new tab)</span>
+        </a>
+      </li>
+      <li>
+        2nd place, US-China Young Maker Competition 2026 (Shanghai): platform lead for AccessFirst, a team-built AI chat
+        service for mental-health treatment navigation in LA County. Owned the Kubernetes environment, Helm charts,
+        RFCs, repository governance, and a HIPAA/SOC 2-ready architecture.
+      </li>
+      <li>Active in open source and engineering meetups across San Diego, Irvine, and Los Angeles.</li>
+    </ul>
+  </div>
 
-          <div class="col-md-4">
-            <h3 class="h5">Engineering Leadership</h3>
-            <ul>
-              <li>System Design & Technical Architecture</li>
-              <li>Infrastructure Stakeholder & Technical Roadmapping</li>
-              <li>Cross-Team Architecture Alignment</li>
-              <li>RFC Authoring & Technical Decision Records</li>
-              <li>PR Reviews, Code Quality & Governance Standards</li>
-              <li>Mentorship & Engineering Enablement</li>
-            </ul>
-          </div>
+  <!-- Skills Section -->
+  <div class="container my-5">
+    <h2 class="mb-4">Skills &amp; Tools</h2>
+    <div class="row">
 
-          <div class="col-md-4">
-            <h3 class="h5">Core Competencies</h3>
-            <ul>
-              <li>Infrastructure as Code (IaC)</li>
-              <li>Application Modernization & Integration Work</li>
-              <li>Full-Stack Development Across Application and Platform Layers</li>
-              <li>Service Reliability Engineering (SRE)</li>
-              <li>SLI/SLO Definition & Operational Excellence</li>
-              <li>Monitoring & Observability Strategy</li>
-              <li>Incident Response & Production Support</li>
-              <li>Cloud Cost Optimization & Infrastructure Efficiency</li>
-              <li>Secure Architecture, Compliance & Least-Privilege IAM</li>
-              <li>Live Debugging in Monolithic & Microservice Architectures</li>
-              <li>Agile / Kanban Delivery Methodology</li>
-            </ul>
-          </div>
+      <div class="col-md-4">
+        <h3 class="h5">Platform &amp; Cloud</h3>
+        <ul>
+          <li>AWS: EKS, EC2, Lambda, S3, RDS, IAM, KMS, Secrets Manager, Transfer Family, CloudWatch, Bedrock</li>
+          <li>Kubernetes, Helm, ArgoCD, Docker, Linkerd</li>
+          <li>Terraform and infrastructure as code</li>
+          <li>Least-privilege IAM, IRSA, mTLS, Wiz, secret scanning</li>
+          <li>SOC 2 and HIPAA environments</li>
+        </ul>
+      </div>
 
-        </div>
+      <div class="col-md-4">
+        <h3 class="h5">Delivery &amp; Observability</h3>
+        <ul>
+          <li>GitHub Actions, GitHub administration, GitOps</li>
+          <li>Jenkins, GitHub Packages, JFrog Artifactory</li>
+          <li>Devbox and reproducible developer environments</li>
+          <li>Datadog, Splunk, CloudWatch</li>
+          <li>On-call, incident response, root-cause analysis</li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="h5">Languages &amp; Practices</h3>
+        <ul>
+          <li>Go, Scala, Ruby on Rails, Python, Bash, SQL (PostgreSQL)</li>
+          <li>REST APIs, event-driven services, Rails monolith modernization</li>
+          <li>RFCs, architecture reviews, system design</li>
+          <li>Code review, mentoring, Agile / Kanban</li>
+          <li>AI-assisted engineering workflows and LLM tooling</li>
+        </ul>
       </div>
 
     </div>

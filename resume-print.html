@@ -106,6 +106,24 @@
       color: #405261;
     }
 
+    .employer {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11.5px;
+      margin: 0 0 4px;
+    }
+
+    .employer .name {
+      font-weight: 700;
+    }
+
+    .employer .note {
+      font-weight: 400;
+      color: #405261;
+    }
+
     .experience-item {
       margin-bottom: 6px;
       break-inside: avoid;
@@ -115,6 +133,16 @@
       margin: 0 0 2px;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .experience-item h3 .dates {
+      font-weight: 400;
+      font-style: italic;
+      color: #405261;
+      white-space: nowrap;
     }
 
     ul {
@@ -131,21 +159,9 @@
       column-gap: 20px;
     }
 
-    .agent-context {
-      position: fixed;
-      inset: 0 auto auto 0;
-      width: 100%;
-      height: 0;
-      overflow: visible;
-      pointer-events: none;
-    }
-
-    .full-context {
-      margin: 0;
-      font-size: 1px;
-      line-height: 1;
-      color: #fff;
-      white-space: normal;
+    .edu-list li,
+    .skills-list li {
+      break-inside: avoid;
     }
   </style>
 </head>
@@ -154,7 +170,7 @@
   <main class="resume-sheet">
     <header class="header">
       <h1>Arash Izadi</h1>
-      <p class="title">Senior Software Engineer</p>
+      <p class="title">Senior Software Engineer &middot; Platform &amp; Infrastructure</p>
       <div class="meta">
         <span class="contact-item"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16" aria-hidden="true">
@@ -175,11 +191,6 @@
         <span class="contact-item"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16" aria-hidden="true">
               <path
-                d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-            </svg></span><a href="https://github.com/arashizadi">github.com/arashizadi</a></span>
-        <span class="contact-item"><span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16" aria-hidden="true">
-              <path
                 d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708C16 15.487 15.474 16 14.825 16H1.175C.526 16 0 15.487 0 14.854V1.146zM4.943 13.5V6.169H2.542V13.5h2.401zm-1.2-8.333c.837 0 1.358-.554 1.358-1.248-.015-.71-.521-1.248-1.342-1.248C2.938 2.67 2.4 3.21 2.4 3.92c0 .694.52 1.248 1.327 1.248h.016zm4.908 8.333V9.359c0-.221.016-.443.082-.601.18-.443.59-.902 1.278-.902.902 0 1.263.68 1.263 1.677V13.5h2.4V9.255c0-2.274-1.212-3.332-2.83-3.332-1.304 0-1.89.714-2.216 1.218h.016V6.169H6.543c.03.634 0 7.331 0 7.331h2.108z" />
             </svg></span><a href="https://linkedin.com/in/arashizadi">linkedin.com/in/arashizadi</a></span>
       </div>
@@ -187,140 +198,100 @@
 
     <section class="section">
       <h2>Summary</h2>
-      <p class="summary">Senior Software Engineer focused on platform infrastructure, reliability engineering, cloud
-        operations, and developer productivity. Experienced in designing and operating AWS/Kubernetes-based systems,
-        modernizing legacy applications, building CI/CD automation, and improving observability across production
-        environments. Hands-on with Terraform, GitHub Actions, Datadog, CloudWatch, Scala, Go, Ruby on Rails, and
-        Python, with practical experience applying AI/LLM tooling to accelerate engineering workflows.</p>
+      <p class="summary">Platform and backend engineer with 4+ years at Optum and RVO Health running AWS/Kubernetes
+        platforms for HIPAA- and SOC 2-regulated healthcare products. Owns release engineering, CI/CD, infrastructure as
+        code, access control, and cloud cost for ~60 microservices and 100+ repositories across five teams, and sits on
+        the tech-leads group that reviews architecture platform-wide.</p>
     </section>
 
     <section class="section">
-      <h2>Selected Experience</h2>
+      <h2>Experience</h2>
+
+      <p class="employer"><span><span class="name">RVO Health</span> <span class="note">&mdash; Optum (UnitedHealth
+            Group) &times; Red Ventures joint venture &middot; Irvine, CA / Remote</span></span><span class="name">Feb 2022 &ndash; Present</span></p>
 
       <section class="experience-item">
-        <h3>RVO Health - Senior Software Engineer, Platform &amp; Infrastructure (2026 - Present)</h3>
+        <h3><span>Senior Software Engineer, Platform &amp; Infrastructure</span><span class="dates">Feb 2026 &ndash; Present</span></h3>
         <ul>
-          <li>Led platform and infrastructure architecture for application, integration, and AI-assisted engineering
-            workflows across production systems.</li>
-          <li>Improved AWS reliability and operational maturity by automating infrastructure workflows, hardening
-            services, and optimizing performance and cloud cost.</li>
-          <li>Built secure AWS-native platform capabilities using Lambda, IAM, Secrets Manager, S3, and Route53, with
-            emphasis on least-privilege access and auditability.</li>
-          <li>Improved deployment safety and developer velocity by building reusable GitHub Actions CI/CD workflows,
-            standardized release processes, and automated validation.</li>
+          <li>Re-architected a mission-critical self-managed SFTP subsystem onto AWS Transfer Family (Lambda auth, Secrets
+            Manager, S3, KMS) with Terraform and a new AWS SDK library in Rails, serving dozens of B2B partners.</li>
+          <li>Led an account-wide cost audit that materially reduced AWS spend: ECR lifecycle policies, log-volume
+            reduction, right-sizing, and decommissioning idle resources.</li>
+          <li>Designed scoped, least-privilege authorization for engineers and services, including just-in-time admin
+            access and per-resource visibility, across a SOC 2 and HIPAA environment.</li>
+          <li>Modernized the core Rails monolith: migrated its database across regions, replaced legacy job systems with
+            Solid Queue and Kubernetes-native jobs, and rewrote jQuery views as modern Rails templates.</li>
         </ul>
       </section>
 
       <section class="experience-item">
-        <h3>RVO Health - Senior Associate Platform Engineer - Platform &amp; Infrastructure (2024 - 2026)</h3>
+        <h3><span>Senior Associate Platform Engineer</span><span class="dates">Mar 2024 &ndash; Feb 2026</span></h3>
         <ul>
-          <li>Improved Kubernetes platform reliability by identifying infrastructure risks, driving long-term
-            mitigations, and standardizing operational practices.</li>
-          <li>Modernized legacy applications and integration paths through containerization and standardized Helm-based
-            deployments.</li>
-          <li>Streamlined delivery workflows using GitHub Actions, ArgoCD, and custom Go tooling to reduce manual
-            release overhead.</li>
-          <li>Expanded production observability by integrating Datadog and CloudWatch dashboards, alerts, and service
-            health indicators.</li>
+          <li>Built the standard release and promotion pipeline in Go on GitHub Actions (GitHub and Jira APIs): promotion
+            time cut from hours to minutes (~95%), fully auditable, carrying ~120 deploys a week.</li>
+          <li>Hardened EKS with IRSA, VPC CIDR controls, and least-privilege IAM, and enforced service-to-service mTLS
+            with Linkerd policies across all services.</li>
+          <li>Built weekly ECR image vulnerability scanning on a GitHub Actions cron with results to Slack, so legacy
+            images are patched against a refreshed CVE database and pass Wiz compliance scans.</li>
+          <li>Containerized legacy VM-based workloads and standardized Helm deployments with ArgoCD (GitOps); took over
+            stalled containerization efforts and delivered them.</li>
+          <li>Administered GitHub for 100+ repos (branch protection, CODEOWNERS, required checks, secret scanning);
+            migrated CI from Jenkins to GitHub Actions and packages from JFrog Artifactory to GitHub Packages.</li>
+          <li>Managed AWS with Terraform, expanded Datadog and CloudWatch alerting, and served on the platform on-call
+            rotation leading incident response and RCA; authored the RFC for AWS Bedrock-assisted on-call triage.</li>
+          <li>Launched weekly platform office hours and drove Devbox adoption across the engineering organization through
+            a documented bootstrap and self-service onboarding.</li>
         </ul>
       </section>
 
       <section class="experience-item">
-        <h3>RVO Health - Associate Software Engineer - MVP Launch Team (2023 - 2024)</h3>
+        <h3><span>Senior Associate Software Engineer, MVP Launch Team</span><span class="dates">Jul 2023 &ndash; Mar 2024</span></h3>
         <ul>
-          <li>Led development of a new MVP initiative under NDA by designing scalable Scala components under tight
-            delivery timelines.</li>
-          <li>Created system design diagrams, technical flowcharts, and implementation plans to align engineers and
-            stakeholders on complex feature behavior.</li>
+          <li>Shipped a HIPAA-regulated B2B/B2C MVP on schedule with a 10-person team: designed and implemented Scala
+            backend services and event-driven logic; wrote system diagrams and technical docs; carried on-call and hotfix
+            releases.</li>
         </ul>
       </section>
 
       <section class="experience-item">
-        <h3>Optum/RVO Health - TDP/Associate Software Engineer - Core Product Team (2022 - 2023)</h3>
+        <h3><span>Associate Software Engineer, Core Product (Optum TDP, then RVO Health)</span><span class="dates">Feb 2022 &ndash; Jul 2023</span></h3>
         <ul>
-          <li>Built secure Scala microservices supporting regulated healthcare workflows with compliance, reliability,
-            and maintainability requirements.</li>
-          <li>Developed REST APIs and PostgreSQL-backed integration points to improve data consistency across internal
-            and external systems.
-          </li>
+          <li>Operated and debugged 24/7 production Scala microservices for state-government healthcare clients under SLA;
+            built PostgreSQL-backed REST APIs and drove RCA fixes that cut incident recurrence (Splunk, Datadog).</li>
         </ul>
       </section>
     </section>
 
     <section class="section">
-      <h2>Core Skills</h2>
+      <h2>Skills</h2>
       <ul class="skills-list">
-        <li>Distributed systems and reliability engineering</li>
-        <li>AWS, Kubernetes, Docker, Helm, Terraform</li>
-        <li>GitHub, GitHub Actions, CI/CD automation</li>
-        <li>Observability with Datadog, Splunk, and CloudWatch</li>
-        <li>GCP exposure through Terraform-based academic and project work</li>
-        <li>Ruby on Rails, Go, Scala, Python, Bash</li>
-        <li>Service health indicators, operational metrics, and incident response</li>
-        <li>Security, compliance, IAM, and auditability</li>
-        <li>System design, full-stack development, integration engineering</li>
-        <li>Developer tooling, platform automation, and application modernization</li>
-        <li>Prompt engineering, RAG systems, LLM context management, internal AI tooling</li>
-        <li>Multi-agent workflow design for parallel engineering execution</li>
+        <li><strong>Cloud &amp; Infrastructure:</strong> AWS (EKS, EC2, Lambda, S3, RDS, IAM, KMS, Secrets Manager,
+          Transfer Family, CloudWatch, Bedrock), Kubernetes, Helm, ArgoCD, Terraform, Docker, Linkerd</li>
+        <li><strong>CI/CD &amp; Observability:</strong> GitHub Actions, GitHub administration, GitOps, Jenkins, Devbox,
+          Datadog, Splunk, CloudWatch</li>
+        <li><strong>Languages:</strong> Go, Scala, Ruby on Rails, Python, Bash, SQL (PostgreSQL)</li>
+        <li><strong>Security &amp; Practices:</strong> SOC 2, HIPAA, least-privilege IAM, IRSA, mTLS, Wiz, incident
+          response, RCA, RFCs, system design, mentoring</li>
       </ul>
     </section>
 
     <section class="section">
       <h2>Education</h2>
-      <ul>
-        <li>B.Tech. in Emerging Media Technology, CUNY New York City College of Technology, 2021</li>
-        <li>A.A.S. in Music Production, CUNY Queensborough Community College, 2018</li>
-        <li>Azure Fundamentals and Azure AI Fundamentals, Microsoft Learn, 2020</li>
+      <ul class="edu-list">
+        <li>B.Tech., Emerging Media Technology, CUNY New York City College of Technology, 2021 (Dean&rsquo;s List)</li>
+        <li>M.S. Computer Science, University of Colorado Boulder, in progress (part-time)</li>
       </ul>
     </section>
 
     <section class="section">
-      <h2>Speaking &amp; Community</h2>
+      <h2>Talks &amp; Honors</h2>
       <ul>
-        <li>Speaker, Intuit Open Source Meetup | Platform Engineering &amp; AI (San Diego, April 2026): Presented
-          "What is Devbox and why you need it?" on reproducible developer environments, onboarding speed, and CI
-          consistency.</li>
-        <li>Active in open source and engineering meetups across San Diego, Irvine, and Los Angeles.</li>
+        <li>Speaker, Intuit Platform Engineering &amp; AI Open Source Meetup, San Diego, April 2026: &ldquo;What is
+          Devbox and why you need it?&rdquo; on reproducible developer environments and onboarding.</li>
+        <li>2nd place, US-China Young Maker Competition 2026 (Shanghai): platform lead for AccessFirst, an AI chat
+          service for mental-health treatment navigation in LA County &mdash; Kubernetes, Helm, RFCs, repository
+          governance, HIPAA/SOC 2-ready design.</li>
       </ul>
-    </section>
-
-    <section class="agent-context">
-      <p class="full-context">Arash Izadi. Senior Software Engineer. Temecula, CA. thisisarash@proton.me.
-        arashizadi.com. github.com/arashizadi. linkedin.com/in/arashizadi. Senior Software Engineer focused on
-        platform infrastructure, reliability engineering, cloud operations, and developer productivity. Experienced in
-        designing and operating AWS/Kubernetes-based systems, modernizing legacy applications, building CI/CD
-        automation, and improving observability across production environments. Hands-on with Terraform, GitHub
-        Actions, Datadog, CloudWatch, Scala, Go, Ruby on Rails, and Python, with practical experience applying AI/LLM
-        tooling to accelerate engineering workflows. RVO Health - Senior Software Engineer, Platform &amp; Infrastructure
-        (2026 - Present): Led platform and infrastructure architecture for application, integration, and AI-assisted
-        engineering workflows across production systems. Improved AWS reliability and operational maturity by
-        automating infrastructure workflows, hardening services, and optimizing performance and cloud cost. Built secure
-        AWS-native platform capabilities using Lambda, IAM, Secrets Manager, S3, and Route53, with emphasis on
-        least-privilege access and auditability. Improved deployment safety and developer velocity by building reusable
-        GitHub Actions CI/CD workflows, standardized release processes, and automated validation. RVO Health - Senior
-        Associate Platform Engineer - Platform &amp; Infrastructure (2024 - 2026): Improved Kubernetes platform
-        reliability by identifying infrastructure risks, driving long-term mitigations, and standardizing operational
-        practices. Modernized legacy applications and integration paths through containerization and standardized
-        Helm-based deployments. Streamlined delivery workflows using GitHub Actions, ArgoCD, and custom Go tooling to
-        reduce manual release overhead. Expanded production observability by integrating Datadog and CloudWatch
-        dashboards, alerts, and service health indicators. RVO Health - Associate Software Engineer - MVP Launch Team
-        (2023 - 2024): Led development of a new MVP initiative under NDA by designing scalable Scala components under
-        tight delivery timelines. Created system design diagrams, technical flowcharts, and implementation plans to
-        align engineers and stakeholders on complex feature behavior. Optum/RVO Health - TDP/Associate Software
-        Engineer - Core Product Team (2022 - 2023): Built secure Scala microservices supporting regulated healthcare workflows with
-        compliance, reliability, and maintainability requirements. Developed REST APIs and
-        PostgreSQL-backed integration points to improve data consistency across internal and external systems. Core
-        skills: Distributed systems and reliability engineering, AWS, Kubernetes, Docker, Helm, Terraform, GitHub,
-        GitHub Actions, CI/CD automation, Observability with Datadog, Splunk, and CloudWatch, Ruby on Rails, Go, Scala,
-        Python, Bash, Service health indicators, operational metrics, incident response, Security, compliance, IAM,
-        auditability, System design, full-stack development, integration engineering, Developer tooling, platform
-        automation, application modernization, Prompt engineering, RAG systems, LLM context management, internal AI
-        tooling, Multi-agent workflow design for parallel engineering execution. Education: B.Tech. in Emerging Media
-        Technology, CUNY New York City College of Technology, 2021. A.A.S. in Music Production, CUNY Queensborough
-        Community College, 2018. Azure Fundamentals and Azure AI Fundamentals, Microsoft Learn, 2020. Speaking and
-        community: Speaker, Intuit Open Source Meetup | Platform Engineering &amp; AI (San Diego, April 2026):
-        Presented "What is Devbox and why you need it?" on reproducible developer environments, onboarding speed, and
-        CI consistency. Active in open source and engineering meetups across San Diego, Irvine, and Los Angeles.</p>
     </section>
   </main>
 </body>
